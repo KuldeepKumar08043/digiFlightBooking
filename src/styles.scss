@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+}
+.booking-container{
+    table {  border-collapse: collapse; border-radius: 30px; } 
+    th {  background-color:#ffffff;  } 
+    .geeks { 
+        border: none; font-weight: bold; vertical-align: middle; width: 25%;
+        .emi{ font-weight: normal; }
+        .logo{ .img{ width: 15%; margin-right: 10px; }}
+    } 
+    .gfg {  border-collapse:separate;  border-spacing:0 15px;  }
+    .mat-sort-header-arrow{ color: #2276e3;  }
+    .mat-sort-header-button:hover{ outline: none; color: #2276e3; }
+}
+

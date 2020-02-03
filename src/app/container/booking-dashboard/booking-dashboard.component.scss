@@ -1,0 +1,13 @@
+.booking-container{
+    background: #e1e7ee;height: 100%;
+    .b-flight{ padding: 0 10px;
+        .listData{ margin: 0;padding:0;
+            li{ list-style-type: none; }
+        }
+        .c-pointer th{ cursor: pointer; }
+        .bookbtn{ background: #f37638; color: #ffffff; line-height: 1; border: none;
+            border-radius: 5px; font-size: 14px; outline: none; padding: 10px 30px; margin-left: 30px;
+        }
+        .price{ .flightprice{ font-weight: bold; display: inline-block; } }
+    }    
+}

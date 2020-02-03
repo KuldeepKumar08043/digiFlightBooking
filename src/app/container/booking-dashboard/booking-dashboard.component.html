@@ -1,0 +1,42 @@
+<section class="booking-container">
+  <div class="b-flight">
+    <h5 class="sortBy">Sort By:</h5>
+    <table class="table gfg" matSort (matSortChange)="sortData($event)">
+      <tr class="bg-white">
+        <th mat-sort-header="departure">Departure</th>
+        <th mat-sort-header="duration">Duration</th>
+        <th mat-sort-header="arrival">Arrival</th>
+        <th mat-sort-header="price">Price</th>
+      </tr>
+
+      <tr class="bg-white" *ngFor="let data of sortedData">
+        <td class="geeks font-weight-noraml">
+          <div>
+            <div class="logo">
+              <img class="img" src="../../../assets/images/{{data.departure.img}}" />
+              <span>{{data.departure.name}}</span>
+            </div>
+            <div>
+              <p class="m-0">{{data.departure.code}} {{data.departure.city}} {{data.departure.country}}</p>
+              <p>{{data.departure.time}}</p>
+            </div>
+          </div>
+        </td>
+        <td class="geeks">{{data.duration}}</td>
+        <td class="geeks">
+          <div>
+            <p>{{data.arrival.code}} {{data.arrival.city}} {{data.arrival.country}}</p>
+            <span>{{data.arrival.arrival1}}</span>
+          </div>
+        </td>
+        <td class="geeks">
+          <div class="price">
+            <span class="flightprice">₹ {{data.price.price1}}</span>
+            <button class="bookbtn">Book</button>
+          </div>
+          <span class="emi">No cost EMI from <b>₹ {{data.price.emi}}</b></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+<section class="bg-color h-100 row align-items-center">
+  <div class="container login w-25">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="text-center">
+        <img class="rounded-circle w-50 m-3" src="../../../assets/images/user.png" />
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">Email address</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Enter email" />
+        <small class="text-danger" 
+        *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.required">
+          Please enter email address!
+        </small>
+        <small class="text-danger" 
+        *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.email">
+          Please enter email address!
+        </small>
+      </div>
+
+      <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" formControlName="password" placeholder="Password" />
+      </div>
+      <small class="text-danger d-block m-2" *ngIf="userValidate"> Invalid credentials! </small>
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+    </form>
+  </div>
+</section>
